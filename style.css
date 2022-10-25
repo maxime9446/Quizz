@@ -9,3 +9,8 @@
 .validation{
     background-color: yellow;
 }
+
+.choix{
+    display: block;
+    text-align: center;
+}
