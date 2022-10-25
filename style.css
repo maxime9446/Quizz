@@ -11,6 +11,8 @@
 }
 
 .choix{
+    margin: 0 auto; 
+    margin-top: 10px;
     display: block;
-    text-align: center;
+    width: 600px;
 }
