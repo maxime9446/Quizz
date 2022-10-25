@@ -1,0 +1,16 @@
+.carre{
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: beige;
+    text-align: center;
+    border:2px solid black;
+}
+
+.validation{
+    background-color: yellow;
+}
+
+.choix{
+    display: block;
+    text-align: center;
+}
