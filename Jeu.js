@@ -37,7 +37,6 @@ function Quiz() {
         };
 
         this.addAnswer = function(answer) {
-        //this.answers(this,.answers.length]=answer;
         this.answers.push(answer);
         },
 
