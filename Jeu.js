@@ -63,19 +63,22 @@ quiz.addQuestion(question2);
 let question3 = new Question("Qu'est-ce qui est jaune et qui attend?",
     ["Jonathan", "Homer Simpson", "Un citron pressé"], 1);
 quiz.addQuestion(question3);
+
 console.log(quiz);
 
-quiz.launch();}
+//quiz.launch();}
 
-let elNbCorrects = document.getElementById("nbcorrects");
+let elNbCorrects = document.querySelectorAll("nbcorrects");
 console.log(elNbCorrects);
 
 console.log(elNbCorrects.textcontent);
+console.log(elNbCorrects.innerHTML);
 elNbCorrects.textcontent=quiz.nbcorrects;
 
-let elNbQuestions = document.getElementsByClassName("nbquestions");
+let elNbQuestions = document.querySelectorAll(".nbquestions");
 console.log(elNbQuestions);
 
-for(let i=0; i<elNbQuestions.length;i++) {
-    elNbQuestions[i].textContent = quiz.questions.length;
+//for(let i=0; i<elNbQuestions.length;i++) {
+//    elNbQuestions[i].textContent = quiz.questions.length;
+//
 }
