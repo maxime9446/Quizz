@@ -1,14 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
+    <html lang="fr">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="Jeu.js"></script>
-    <title>Quizz</title>
     <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
+    <main>
+        <section class="startquizz">
+            <div>
+                <h1 class="quizz__maintitle">Bienvenue sur ce quizz</h1>
+                <p class="quizz__maindescription">Il sera composé de <span class="nbquestions">x</span> questions...</p>
+            </div>
+            <button id="next" class="quizz__btn">OK</button>
+        </section>
+
+        <section class="quizz">
+            <div class="questionscreen" id="screenQuestion1">
+                <h2 class="question">Quel est l'âge du capitaine ?</h2>
+                <ul class="question__answers">
+                    <li class="answer correct" data-question-1 >42</li>
+                    <li class="answer" data-question-1>101</li>
+                    <li class="answer wrong" data-question-1>18</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="quizz">
+            <div class="questionscreen" id="screenQuestion2">
+                <h2 class="question">Quelle est la différence
+                    entre un pigeon?</h2>
+                <ul class="question__answers">
+                    <li class="answer wrong">Glouuuuuuu</li>
+                    <li class="answer">Uh?</li>
+                    <li class="answer correct">La longueur des patttes</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="quizz">
+            <div class="questionscreen" id="screenQuestion3">
+                <h2 class="question">Qu’est-ce qui est jaune et qui attend?</h2>
+                <ul class="question__answers">
+                    <li class="answer correct">Johnatan</li>
+                    <li class="answer">Homer Simpson</li>
+                    <li class="answer wrong">Un citron pressé</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="quizz">
+            <div class="resultscreen">
+                <h2 class="quizz__results">Résultats</h2>
+                <p class="quizz__description">
+                    <span id="nbCorrects"><strong>x</strong> réponses sur x correctes</span>
+                </p>
+                <button id="next" class="quizz__btn">Recommencer</button>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
     <div class="carre">
         <h1>BIENVENUE SUR CE QUIZZZZZZZZZZ</h1>
         <h3>Il sera composé de 3 questions...</h3>
