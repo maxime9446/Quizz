@@ -89,6 +89,10 @@
     border: 2px solid #000000;
     font-family: 'Grandstander';
     font-style: normal;
+    margin: auto;
+    display: block;
+    margin-top: 1%;
+    margin-bottom: 3%;
     cursor: pointer;
     font-weight: 600;
     font-size: 32px;
