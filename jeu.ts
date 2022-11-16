@@ -35,41 +35,30 @@ let question3 = new question(
   "Jonathan"
 );
 
-
-
-// Création d'un tableau contenant toutes les questions
 let questions = [question1, question2, question3];
 
-// Création d'une variable qui va récupérer la div "questionPage"
+let startNumberQuestions = document.querySelector("#startCard");
+startNumberQuestions?.appendChild(startCard(questions));
+
 let questionElementHtml = document.querySelector("#questionPage");
 
-// Création d'une variable constante qui récupère les données lorsque l'on va click sur le btn
 const startBtn = document.querySelector("[data-start-btn]");
 
-// fonction addEventListener permettant d'écouter l'évènement que j'ai donner "click"
 startBtn.addEventListener("click", () => {
-  
-  // Création d'une variable qui correspond à un int  
   let questionNumber = 0;
 
   let countCorrectAnswers = 0;
 
-  // Création d'une variable qui récupère la section "questionCard"
   let cardQuestion = document.querySelector("#questionCard");
-  // Définit des attributs, ici style, l'absence de l'attribut signifie que sa valeur est false
   cardQuestion.setAttribute("style", "");
 
-  // Création d'une variable qui récupère la section "start"
   let cardStartQuizz = document.querySelector(".start");
-  // Définit des attributs, ici style en display:none
   cardStartQuizz.setAttribute("style", "display:none;");
 
-  // Fonction 
   createQuestion(questions, questionNumber, countCorrectAnswers);
 });
 
 function deleteOldQuestion() {
-  // Je récupère la div de la class question et sa valeur titre
   let oldTitle = document.querySelector("#question-title");
 
   oldTitle.parentNode.removeChild(oldTitle);
@@ -82,14 +71,10 @@ function deleteOldQuestion() {
 
 function createQuestion(questions, questionNumber, countCorrectAnswers) {
   let question = questions[questionNumber];
-  // Création d'une variable qui va récupérer la div "questionPage"
   let divQuestionTitle = document.querySelector("#questionPage");
-  // si la question a deja un parent, elle est retirée puis une nouvelle s'ajoute
   divQuestionTitle?.appendChild(createQuestionTitle(question["title"]));
 
-  // Création d'une variable qui va récupérer la div "questionAnswers"
   let divQuestionAnswers = document.querySelector("#questionAnswers");
-  // Création d'une variable qui va récupérer la fonction 
   let divQuestionReponse = createQuestionReponses(
     question["answers"],
     question,
@@ -97,34 +82,34 @@ function createQuestion(questions, questionNumber, countCorrectAnswers) {
     questions,
     countCorrectAnswers
   );
-
-  //   divQuestionAnswers?.appendChild();
 }
 
 function createQuestionTitle(title) {
-  // => <h2></h2>
   const titleElement = document.createElement("h2");
-  // => <h2 class="question"></h2>
+
   titleElement.setAttribute("class", "question");
-  // => <h2 class="question"></h2>
+
   titleElement.setAttribute("id", "question-title");
-  // <h2 class="question">Quel est l'âge du capitaine ?</h2>
+
   titleElement.appendChild(document.createTextNode(title));
 
   return titleElement;
 }
 
-//passe en paramètre les valeurs ()
-function createQuestionReponses(answers, question, questionNumber, questions, countCorrectAnswers) {
+function createQuestionReponses(
+  answers,
+  question,
+  questionNumber,
+  questions,
+  countCorrectAnswers
+) {
   answers.forEach((answer) => {
-    // => <h2></h2>
     const answerElement = document.createElement("li");
-    // => <h2 class="question"></h2>
+
     answerElement.setAttribute("class", "answer");
-    // <h2 class="question">Quel est l'âge du capitaine ?</h2> // si la question a deja un parent, elle est retirée puis une nouvelle s'ajoute
+
     answerElement.appendChild(document.createTextNode(answer));
 
-    // Création d'une variable qui va récupérer la div "questionAnswers"
     let divQuestionAnswers = document.querySelector("#questionAnswers");
     divQuestionAnswers?.appendChild(answerElement);
   });
@@ -145,8 +130,8 @@ function createQuestionReponses(answers, question, questionNumber, questions, co
   });
 }
 
-function getNumberOfCorrectAnswers(countCorrectAnswers){
-    return countCorrectAnswers + 1;
+function getNumberOfCorrectAnswers(countCorrectAnswers) {
+  return countCorrectAnswers + 1;
 }
 
 function nextQuestion(questionNumber, questions, countCorrectAnswers) {
@@ -168,12 +153,9 @@ function getResult(questions, countCorrectAnswers) {
   let cardResult = document.querySelector("#resultCard");
   cardResult.setAttribute("style", "");
 
-  //   let numberOfQuestion = countNumberOfQuestion(questions);
-  //   <strong id="numberOfCorrectAnswer"></strong> réponses sur x correctes
   let showedResult = document.querySelector("#nbCorrects");
   showedResult.appendChild(setTextResult(countCorrectAnswers));
   showedResult.appendChild(countNumberOfQuestion(questions));
-  //numberOfCorrectAnswer
 }
 
 function setTextResult(correctAnswers) {
@@ -188,4 +170,16 @@ function countNumberOfQuestion(questions) {
   return document.createTextNode(
     " réponses sur " + questions.length + " correctes"
   );
+}
+
+function startCard(questions) {
+  let createP = document.createElement("p");
+  createP.setAttribute("class", "description");
+  createP.appendChild(
+    document.createTextNode(
+      "Il sera composé de " + questions.length + " questions."
+    )
+  );
+
+  return createP;
 }
