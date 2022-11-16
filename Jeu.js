@@ -1,122 +1,99 @@
-function Quiz() {
-    this.questions = [];
-    this.nbcorrects=0;
-
-    this.addQuestion = function (question) {
-        this.questions.push(question);
-    }
-    
-    this.launch = function() {
-
-        this.questions.forEach((question)=>{
-            let answerUser = prompt (question.getBody());
-            if(question.isCorrectAnswer(answerUser)){
-                console.log("Gagné!");
-                this.nbCorrects++;
-            }
-            else {
-                console.log("Perdu!");
-            }
-        })
-        this.showResults();
-    }
-
-    function Question(title, answers, answerCorrect) {
+var question = /** @class */ (function () {
+    function question(title, answers, correctAnswer) {
         this.title = title;
-        this.answers=answers;
-        this.answerCorrect=answerCorrect;
-
-        this.getBody = function() {
-            let body = this.title.toUpperCase() + "\n";
-
-            for (let i=0;i<this.answers.length;i++) {
-                body += (i+1) + ". " + this.answers[i] + "\n";
+        this.answers = answers;
+        this.correctAnswer = correctAnswer;
+    }
+    question.prototype.isCorrectAnswer = function (userResponse) {
+        if (userResponse == this.correctAnswer) {
+            return true;
         }
-
-        return body; I
-        };
-
-        this.addAnswer = function(answer) {
-        this.answers.push(answer);
-        },
-
-
-        this.isCorrectAnswer = function (answerUser) {
-            if (answerUser == this.answerCorrect) {
-                return true;
-            }
         else {
             return false;
         }
+    };
+    return question;
+}());
+//Nouvelle question
+var question1 = new question("Quel est l'âge du capitaine ?", [42, 101, 18], 42);
+var question2 = new question("Quel est la différence entre un pigeon ?", ["GLOUUUU", "Uh ?", "La longueur des pattes"], "La longueur des pattes");
+var question3 = new question("Qu'est-ce qui est jaune et qui attend ?", ["Jonathan", "Homer Simpson", "Un citron pressé"], "Jonathan");
+var questions = [question1, question2, question3];
+// console.log(questions);
+var questionElementHtml = document.querySelector("#questionPage");
+var startBtn = document.querySelector("[data-start-btn]");
+startBtn.addEventListener("click", function () {
+    //   console.log(questions[0]);
+    var questionNumber = 0;
+    var cardQuestion = document.querySelector("#questionCard");
+    cardQuestion.setAttribute('style', '');
+    var cardStartQuizz = document.querySelector(".start");
+    cardStartQuizz.setAttribute('style', 'display:none;');
+    createQuestion(questions, questionNumber);
+});
+function deleteOldQuestion() {
+    // console.log('bonjour');
+    var oldTitle = document.querySelector("#question-title");
+    oldTitle.parentNode.removeChild(oldTitle);
+    var oldResponses = document.querySelectorAll(".answer");
+    oldResponses.forEach(function (oldResponse) {
+        oldResponse.parentNode.removeChild(oldResponse);
+    });
+}
+function createQuestion(questions, questionNumber) {
+    console.log(questionNumber);
+    var question = questions[questionNumber];
+    // Je récupère la div qui contient le titre de ma question
+    var divQuestionTitle = document.querySelector("#questionPage");
+    divQuestionTitle === null || divQuestionTitle === void 0 ? void 0 : divQuestionTitle.appendChild(createQuestionTitle(question["title"]));
+    var divQuestionAnswers = document.querySelector("#questionAnswers");
+    var divQuestionReponse = createQuestionReponses(question["answers"], question, questionNumber, questions);
+    //   divQuestionAnswers?.appendChild();
+}
+function createQuestionTitle(title) {
+    // => <h2></h2>
+    var titleElement = document.createElement("h2");
+    // => <h2 class="question"></h2>
+    titleElement.setAttribute("class", "question");
+    // => <h2 class="question"></h2>
+    titleElement.setAttribute("id", "question-title");
+    // <h2 class="question">Quel est l'âge du capitaine ?</h2>
+    titleElement.appendChild(document.createTextNode(title));
+    return titleElement;
+}
+function createQuestionReponses(answers, question, questionNumber, questions) {
+    answers.forEach(function (answer) {
+        // => <h2></h2>
+        var answerElement = document.createElement("li");
+        // => <h2 class="question"></h2>
+        answerElement.setAttribute("class", "answer");
+        // <h2 class="question">Quel est l'âge du capitaine ?</h2>
+        answerElement.appendChild(document.createTextNode(answer));
+        var divQuestionAnswers = document.querySelector("#questionAnswers");
+        divQuestionAnswers === null || divQuestionAnswers === void 0 ? void 0 : divQuestionAnswers.appendChild(answerElement);
+    });
+    var responsesBtn = document.querySelectorAll(".answer");
+    responsesBtn.forEach(function (responseBtn) {
+        responseBtn.addEventListener("click", function () {
+            if (question.isCorrectAnswer(responseBtn.textContent)) {
+                responseBtn.setAttribute("class", "answer correct");
+            }
+            else {
+                responseBtn.setAttribute("class", "answer wrong");
+            }
+            setTimeout(function () {
+                nextQuestion(questionNumber, questions);
+            }, 1500);
+        });
+    });
+}
+function nextQuestion(questionNumber, questions) {
+    if (questions[questionNumber + 1]) {
+        deleteOldQuestion();
+        createQuestion(questions, questionNumber + 1);
     }
-};
-
-let quiz = new Quiz();
-
-let question1 = new Question("Quel est l'âge du capitaine?", [42, 101, 18], 1);
-quiz.addQuestion(question1);
-
-let question2 = new Question("Quelle est la différence entre un pigeon?",
-    ["Glouuu", "uh?", "La longueur des pattes"], 3);
-quiz.addQuestion(question2);
-
-let question3 = new Question("Qu'est-ce qui est jaune et qui attend?",
-    ["Jonathan", "Homer Simpson", "Un citron pressé"], 1);
-quiz.addQuestion(question3);
-console.log(quiz);
-
-quiz.launch();}
-
-let elNbCorrects = document.getElementById("nbcorrects");
-console.log(elNbCorrects);
-
-console.log(elNbCorrects.textcontent);
-elNbCorrects.textcontent=quiz.nbcorrects;
-
-let elNbQuestions = document.getElementsByClassName("nbquestions");
-console.log(elNbQuestions);
-
-for(let i=0; i<elNbQuestions.length;i++) {
-    elNbQuestions[i].textContent = quiz.questions.length;
+    else {
+        getResult();
+    }
 }
-
-let nbQuestions = 3;
-console.log(nbQuestions);
-alert ("Bienvenue sur ce quiz!" + "\n " + nbQuestions + " questions seront posées");
-
-
-// Question 1
-let reponseUtilisateur = prompt (`question 1/3
-Quel est l'âge du capitaine?
-1. 42
-2. 101
-3. 18`);
-let bonneReponse = 1; 
-
-console.log (reponseUtilisateur);
-
-if (reponseUtiliser == bonneReponse) {
-        console.log("T'as gagné");
-}
-else {
-    console.l0g("Bruuuh t'es nul");
-}
-
-
-// Question 2
-let reponseUtilisateur = prompt (`question 1/3
-Quel est l'âge du capitaine?
-1. 42
-2. 101
-3. 18`);
-let bonneReponse = 1; 
-
-console.log (reponseUtilisateur);
-
-if (reponseUtiliser == bonneReponse) {
-        console.log("T'as gagné");
-}
-else {
-    console.l0g("Bruuuh t'es nul");
-}
-
+function getResult() { }
