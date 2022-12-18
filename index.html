@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <html lang="fr">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="start">
+            <div id="startCard">
+                <h1 class="title">Bienvenue sur ce quizz</h1>
+            </div>
+            <button id="next" class="btn" data-start-btn>OK</button>
+        </section>
+        <section class="quizz" style="display:none" id="questionCard">
+            <div class="questionsPage" id="questionPage">
+                <ul class="questionsAnswers" id="questionAnswers">
+                </ul>
+            </div>
+        </section>
+        <section class="quizz" style="display:none" id="resultCard">
+            <div class="resultscreen">
+                <h2 class="quizz__results">Résultats</h2>
+                <p class="quizz__description">
+                    <span id="nbCorrects"></span>
+                </p>
+                <button id="next" class="quizz__btn">Recommencer</button>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="src/main.ts"></script>
+</body>
+</html>
