@@ -1,6 +1,6 @@
 <!DOCTYPE html>
+<html lang="fr">
 <head>
-    <html lang="fr">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,57 +8,31 @@
     <title>Document</title>
 </head>
 <body>
-    <main>
-        <div class="cards-list">
-            <div class="card 1">
-              <div class="card_image"> 
-                <img src="https://sports-village.com/img/home/multisport.webp" /> 
-            </div>
-            <div class="card_title">
-                <p>Sports</p>
-            </div>
+<main>
+    <div class="cards-list">
+    </div>
+    <section class="start" style="display:none;">
+        <div id="startCard">
+            <h1 class="title">Bienvenue sur ce quizz</h1>
         </div>
-    
-            
-        <div class="card 2">
-            <div class="card_image">
-                <img src="https://img.freepik.com/vecteurs-libre/ensemble-animaux-sauvages_1308-28248.jpg" />
-            </div>
-            <div class="card_title">
-                <p>Animaux</p>
-            </div>
+        <button id="next" class="btn" data-start-btn>OK</button>
+    </section>
+    <section class="quizz" style="display:none" id="questionCard">
+        <div class="questionsPage" id="questionPage">
+            <ul class="questionsAnswers" id="questionAnswers">
+            </ul>
         </div>
-              
-        <div class="card 3">
-            <div class="card_image">
-                <img src="https://lewebpedagogique.com/haudrafrancais/files/2020/09/science.png" />
-            </div>
-            <div class="card_title title-black">
-                <p>Sciences</p>
-            </div>
+    </section>
+    <section class="quizz" style="display:none" id="resultCard">
+        <div class="resultscreen">
+            <h2 class="quizzresults">Résultats</h2>
+            <p class="quizzdescription">
+                <span id="nbCorrects"></span>
+            </p>
+            <button id="next" class="quizz__btn">Recommencer</button>
         </div>
-        <section class="start">
-            <div id="startCard">
-                <h1 class="title">Bienvenue sur ce quizz</h1>
-            </div>
-            <button id="next" class="btn" data-start-btn>OK</button>
-        </section>
-        <section class="quizz" style="display:none" id="questionCard">
-            <div class="questionsPage" id="questionPage">
-                <ul class="questionsAnswers" id="questionAnswers">
-                </ul>
-            </div>
-        </section>
-        <section class="quizz" style="display:none" id="resultCard">
-            <div class="resultscreen">
-                <h2 class="quizz__results">Résultats</h2>
-                <p class="quizz__description">
-                    <span id="nbCorrects"></span>
-                </p>
-                <button id="next" class="quizz__btn">Recommencer</button>
-            </div>
-        </section>
-    </main>
-    <script type="module" src="src/main.ts"></script>
+    </section>
+</main>
+<script type="module" src="src/main.ts"></script>
 </body>
 </html>

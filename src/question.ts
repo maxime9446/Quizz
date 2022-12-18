@@ -1,21 +1,11 @@
-import Reponse  from './answer';
+// L'objectif est de créer chaque question de la class quizz de quizz.ts, et de pouvoir les afficher dans une page dédiée. Tout est en typescript
+import Response  from './Answers';
 export default class Question {
-  wording: string;
-  img: string;
-  reponses: Array<Reponse>;
+    name: string;
+    answers: Array<Response>;
 
-  constructor(wording: string, img: string, reponses: Array<Reponse>) {
-    this.wording = wording;
-    this.img = img;
-    this.reponses = reponses;
-  }
-
-  //affiche la question
-  getBody(): string {
-    let body = this.wording + "\n";
-    for (let i = 0; i < this.reponses.length; i++) {
-      body += this.reponses[i].getBody() + "\n";
+    constructor(name: string, answers: Array<Response>) {
+        this.name = name;
+        this.answers = answers;
     }
-    return body;
-  }
 }

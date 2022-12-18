@@ -1,22 +1,13 @@
-import Quiz from "./quiz";
+//L'objectif est de créer une catégorie pour chaque quiz, et de pouvoir les afficher dans une page dédiée. Tout est en typescript
+import Quiz  from './Quiz';
 export default class Category {
-    title: string;
-    icon: string;
-    color: string;
+    name: string;
     quizzes: Array<Quiz>;
+    image: string;
 
-    constructor(title: string, icon: string, color: string, quizzes: Array<Quiz>) {
-        this.title = title;
-        this.icon = icon;
-        this.color = color;
+    constructor(name: string, quizzes: Array<Quiz>, image: string) {
+        this.name = name;
         this.quizzes = quizzes;
-    }
-
-    getBody(): string {
-        let body = this.title + "\n";
-        for (let i = 0; i < this.quizzes.length; i++) {
-            body += this.quizzes[i].getBody() + "\n";
-        }
-        return body;
+        this.image = image;
     }
 }

@@ -1,20 +1,13 @@
-import Question from "./question";
+// L'objectif est créer une class pour le thème des questions, que l'on appellera quiz.
+
+// On va créer une class Quiz qui va contenir les questions de question.ts et les réponses de reponses.ts
+import Question  from './Question';
 export default class Quiz {
-    title: string;
-    img: string;
+    name: string;
     questions: Array<Question>;
 
-    constructor(title: string, img: string, questions: Array<Question>) {
-        this.title = title;
-        this.img = img;
+    constructor(name: string, questions: Array<Question>) {
+        this.name = name;
         this.questions = questions;
-    }
-
-    getBody(): string {
-        let body = this.title + "\n";
-        for (let i = 0; i < this.questions.length; i++) {
-            body += this.questions[i].getBody() + "\n";
-        }
-        return body;
     }
 }
