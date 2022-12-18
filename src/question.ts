@@ -1,19 +1,21 @@
-export default class question {
-    title;
-    answers;
-    correctAnswer;
-  
-    constructor(title, answers, correctAnswer) {
-      this.title = title;
-      this.answers = answers;
-      this.correctAnswer = correctAnswer;
-    }
-  
-    isCorrectAnswer(userResponse) {
-      if (userResponse == this.correctAnswer) {
-        return true;
-      } else {
-        return false;
-      }
-    }
+import Reponse  from './answer';
+export default class Question {
+  wording: string;
+  img: string;
+  reponses: Array<Reponse>;
+
+  constructor(wording: string, img: string, reponses: Array<Reponse>) {
+    this.wording = wording;
+    this.img = img;
+    this.reponses = reponses;
   }
+
+  //affiche la question
+  getBody(): string {
+    let body = this.wording + "\n";
+    for (let i = 0; i < this.reponses.length; i++) {
+      body += this.reponses[i].getBody() + "\n";
+    }
+    return body;
+  }
+}
