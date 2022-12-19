@@ -83,6 +83,11 @@ function startQuiz(id: string|null) {
             startCard?.setAttribute('style', "");
 
             let startNumberQuestions = document.querySelector("#startCard");
+
+            let createImg = document.createElement("img");
+            createImg.setAttribute("class", "imgQuiz");
+            createImg.setAttribute("src", category.image);
+            startNumberQuestions.appendChild(createImg);
             startNumberQuestions?.appendChild(startElement(category.quizzes[0].questions, category));
 
             const startBtn = document.querySelector("[data-start-btn]");
@@ -107,6 +112,7 @@ function startQuiz(id: string|null) {
 }
 
 function startElement(questions, category) {
+
     let createP = document.createElement("p");
     createP.setAttribute("class", "description");
     createP.appendChild(
