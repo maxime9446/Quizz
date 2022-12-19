@@ -154,39 +154,38 @@ function createQuestionTitle(title) {
 }
 
 function createQuestionReponses(
-    answers,
-    question,
-    questionNumber,
-    questions,
-    countCorrectAnswers
+  answers,
+  question,
+  questionNumber,
+  questions,
+  countCorrectAnswers
 ) {
-    answers.forEach((answer) => {
-        const answerElement = document.createElement("li");
+  answers.forEach((answer) => {
+      const answerElement = document.createElement("li");
 
-        answerElement.setAttribute("class", "answer");
+      answerElement.setAttribute("class", "answer");
 
-        answerElement.appendChild(document.createTextNode(answer.name));
+      answerElement.appendChild(document.createTextNode(answer.name));
 
-        let divQuestionAnswers = document.querySelector("#questionAnswers");
-        divQuestionAnswers?.appendChild(answerElement);
-    });
-    question.answers.forEach((responseBtn:any) => {
-        responseBtn.addEventListener("click", () => {
-           //console.log(question.answers.);
-            switch (responseBtn.correct) {
-                case true:
-                    responseBtn.setAttribute("class", "answer correct");
-                    countCorrectAnswers = getNumberOfCorrectAnswers(countCorrectAnswers);
-                    break;
-                case false :
-                    responseBtn.setAttribute("class", "answer wrong");
-                    break
-            }
-            setTimeout(function () {
-                nextQuestion(questionNumber, questions, countCorrectAnswers);
-            }, 1500);
-        });
-    });
+      let divQuestionAnswers = document.querySelector("#questionAnswers");
+      divQuestionAnswers?.appendChild(answerElement);
+  });
+  const responsesBtn = document.querySelectorAll(".answer");
+
+  responsesBtn.forEach((responseBtn) => {
+      responseBtn.addEventListener("click", () => {
+        console.log(responseBtn.textContent);
+          if (question.isCorrectAnswer(responseBtn.textContent)) {
+              responseBtn.setAttribute("class", "answer correct");
+              countCorrectAnswers = getNumberOfCorrectAnswers(countCorrectAnswers);
+          } else {
+              responseBtn.setAttribute("class", "answer wrong");
+          }
+          setTimeout(function () {
+              nextQuestion(questionNumber, questions, countCorrectAnswers);
+          }, 1500);
+      });
+  });
 }
 
 function getNumberOfCorrectAnswers(countCorrectAnswers) {
