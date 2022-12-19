@@ -121,7 +121,7 @@ function startElement(questions, category) {
 function createElementQuestion(questions: any, questionNumber:any, countCorrectAnswers:any){
         let question = questions[questionNumber];
         let divQuestionTitle = document.querySelector("#questionPage");
-        divQuestionTitle?.appendChild(createQuestionTitle(question.name));
+        divQuestionTitle?.prepend(createQuestionTitle(question.name));
 
         let divQuestionReponse = createQuestionReponses(
             question.answers,
