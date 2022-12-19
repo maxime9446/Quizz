@@ -174,13 +174,16 @@ function createQuestionReponses(
 
   responsesBtn.forEach((responseBtn) => {
       responseBtn.addEventListener("click", () => {
-        console.log(responseBtn.textContent);
-          if (question.isCorrectAnswer(responseBtn.textContent)) {
+        question.answers.forEach((reponseCorrect)=>{
+          if(reponseCorrect.name == responseBtn.textContent){
+            if(reponseCorrect.correct == true){
               responseBtn.setAttribute("class", "answer correct");
               countCorrectAnswers = getNumberOfCorrectAnswers(countCorrectAnswers);
-          } else {
+            }else{
               responseBtn.setAttribute("class", "answer wrong");
+            }
           }
+        })
           setTimeout(function () {
               nextQuestion(questionNumber, questions, countCorrectAnswers);
           }, 1500);

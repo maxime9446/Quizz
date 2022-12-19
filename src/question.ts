@@ -8,12 +8,4 @@ export default class Question {
         this.name = name;
         this.answers = answers;
     }
-
-    isCorrectAnswer(): boolean {
-      if (this.answers.correct) {
-        return true;
-      } else {
-        return false;
-      }
-    }
 }
