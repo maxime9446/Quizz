@@ -79,6 +79,8 @@ function startQuiz(id: string|null) {
         if (category.name === id){
             let cardsList = document.querySelector(".cards-list");
             cardsList?.setAttribute('style', "display:none");
+            let titleCategory = document.querySelector(".title");
+            titleCategory?.setAttribute('style', "display:none");
             let startCard = document.querySelector(".start");
             startCard?.setAttribute('style', "");
 
