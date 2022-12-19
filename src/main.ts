@@ -6,61 +6,52 @@ import Category from "./Category";
 const categories = Array(
     //First category
     new Category("Sport", [
-        new Quiz("Populaire", [
-            new Question("Quel est le sport le plus populaire au monde ?", [
-                new Response("Football", false),
-                new Response("Basketball", true),
-                new Response("Tennis", false)
+        new Quiz("PSG", [
+            new Question("En 1974, le PSG cherche des stars et bat le record français d’argent investi sur un joueur.", [
+                new Response("Vrai", true),
+                new Response("Faux", false),
             ]),
-            new Question("Quel est le sport le plus populaire en France ?", [
-                new Response("Football", true),
-                new Response("Basketball", false),
-                new Response("Tennis", false)
+            new Question("Il existe une référence à Louis XIV sur la plupart des logos du PSG jusqu’en 2013.", [
+                new Response("Vrai", true),
+                new Response("Faux", false),
             ]),
-            new Question("Quel est le sport le plus populaire en Belgique ?", [
-                new Response("Football", false),
-                new Response("Basketball", false),
-                new Response("Tennis", true)
+            new Question("Lors de son arrivée dans le monde professionnel, le Paris Saint-Germain (PSG) est promu directement en Division 1.", [
+                new Response("Vrai", false),
+                new Response("Faux", true),
             ])
         ])
     ], "https://sports-village.com/img/home/multisport.webp"),
     //Second Category
     new Category("Animaux", [
-        new Quiz("Populaire", [
-            new Question("Quel est le sport le plus populaire au monde ?", [
-                new Response("Football", false),
-                new Response("Basketball", true),
-                new Response("Tennis", false)
+        new Quiz("Les animaux du désert", [
+            new Question("Le fennec peut survivre dans le désert grâce à ses immenses oreilles.", [
+                new Response("Vrai", true),
+                new Response("Faux", false),
             ]),
-            new Question("Quel est le sport le plus populaire en France ?", [
-                new Response("Football", true),
-                new Response("Basketball", false),
-                new Response("Tennis", false)
+            new Question("Lorsqu’il court, le guépard peut atteindre une vitesse maximale de 80 km/h.", [
+                new Response("Vrai", false),
+                new Response("Faux", true),
             ]),
-            new Question("Quel est le sport le plus populaire en Belgique ?", [
-                new Response("Football", false),
-                new Response("Basketball", false),
-                new Response("Tennis", true)
+            new Question("Les cobras n’ont pas de prédateur connu ?", [
+                new Response("Vrai", false),
+                new Response("Faux", true),
             ])
         ])
     ], "https://img.freepik.com/vecteurs-libre/ensemble-animaux-sauvages_1308-28248.jpg"),
     //Second Category
     new Category("Sciences", [
-        new Quiz("Populaire", [
-            new Question("Quel est le sport le plus populaire au monde ?", [
-                new Response("Football", false),
-                new Response("Basketball", true),
-                new Response("Tennis", false)
+        new Quiz("les fusées", [
+            new Question("La Saturn V est la fusée qui a propulsé Apollo 11 vers la Lune, en juillet 1969.", [
+                new Response("Vrai", true),
+                new Response("Faux", false),
             ]),
-            new Question("Quel est le sport le plus populaire en France ?", [
-                new Response("Football", true),
-                new Response("Basketball", false),
-                new Response("Tennis", false)
+            new Question("La fusée Ariane est le véhicule de lancement de l’Agence spatiale européenne.", [
+                new Response("Vrai", true),
+                new Response("Faux", false),
             ]),
-            new Question("Quel est le sport le plus populaire en Belgique ?", [
-                new Response("Football", false),
-                new Response("Basketball", false),
-                new Response("Tennis", true)
+            new Question("Le nom de la fusée qui a transporté l’acteur William Shatner, qui a incarné le capitaine Kirk, était l’Explorer 1.", [
+                new Response("Vrai", false),
+                new Response("Faux", true),
             ])
         ])
     ], "https://lewebpedagogique.com/haudrafrancais/files/2020/09/science.png"),
