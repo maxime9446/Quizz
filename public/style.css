@@ -92,6 +92,15 @@
     color: black;
 }
 
+.imgQuiz{
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 100px;
+    margin-top: -25px;
+    height: 200px;
+}
 .btn{
     width: 189px;
     height: 55px;
@@ -165,7 +174,7 @@
     text-transform: uppercase;
     color: black;
 }
-.question__answers{
+.questionAnswers{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -206,7 +215,7 @@
 .wrong{
     background: rgb(255, 0, 0);
 }
-.quizz__results{
+.quizzresults{
     font-family: 'Grandstander';
     font-style: normal;
     font-weight: 600;
@@ -216,7 +225,7 @@
     text-transform: uppercase;
     color: black;
 }
-.quizz__description{
+.quizzdescription{
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 700;
@@ -224,6 +233,6 @@ font-size: 32px;
 line-height: 48px;
 text-align: center;
 }
-.quizz__description span strong{
+.quizzdescription span strong{
 color: #4B8C38;
 }

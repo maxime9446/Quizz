@@ -9,13 +9,14 @@
 </head>
 <body>
 <main>
+    <h2 class="title" style="text-align:center">Veuillez sélectionner une catégorie de quiz</h2>
     <div class="cards-list">
     </div>
     <section class="start" style="display:none;">
         <div id="startCard">
             <h1 class="title">Bienvenue sur ce quizz</h1>
         </div>
-        <button id="next" class="btn" data-start-btn>OK</button>
+        <button id="next" class="btn" data-start-btn>COMMENCER</button>
     </section>
     <section class="quizz" style="display:none" id="questionCard">
         <div class="questionsPage" id="questionPage">
@@ -29,7 +30,7 @@
             <p class="quizzdescription">
                 <span id="nbCorrects"></span>
             </p>
-            <button id="next" class="quizz__btn">Recommencer</button>
+            <button id="next" onClick="history.go(0)" class="quizz__btn">Recommencer</button>
         </div>
     </section>
 </main>

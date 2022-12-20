@@ -6,61 +6,52 @@ import Category from "./Category";
 const categories = Array(
     //First category
     new Category("Sport", [
-        new Quiz("Populaire", [
-            new Question("Quel est le sport le plus populaire au monde ?", [
-                new Response("Football", false),
-                new Response("Basketball", true),
-                new Response("Tennis", false)
+        new Quiz("PSG", [
+            new Question("En 1974, le PSG cherche des stars et bat le record français d’argent investi sur un joueur.", [
+                new Response("Vrai", true),
+                new Response("Faux", false),
             ]),
-            new Question("Quel est le sport le plus populaire en France ?", [
-                new Response("Football", true),
-                new Response("Basketball", false),
-                new Response("Tennis", false)
+            new Question("Il existe une référence à Louis XIV sur la plupart des logos du PSG jusqu’en 2013.", [
+                new Response("Vrai", true),
+                new Response("Faux", false),
             ]),
-            new Question("Quel est le sport le plus populaire en Belgique ?", [
-                new Response("Football", false),
-                new Response("Basketball", false),
-                new Response("Tennis", true)
+            new Question("Lors de son arrivée dans le monde professionnel, le Paris Saint-Germain (PSG) est promu directement en Division 1.", [
+                new Response("Vrai", false),
+                new Response("Faux", true),
             ])
         ])
     ], "https://sports-village.com/img/home/multisport.webp"),
     //Second Category
     new Category("Animaux", [
-        new Quiz("Populaire", [
-            new Question("Quel est le sport le plus populaire au monde ?", [
-                new Response("Football", false),
-                new Response("Basketball", true),
-                new Response("Tennis", false)
+        new Quiz("Les animaux du désert", [
+            new Question("Le fennec peut survivre dans le désert grâce à ses immenses oreilles.", [
+                new Response("Vrai", true),
+                new Response("Faux", false),
             ]),
-            new Question("Quel est le sport le plus populaire en France ?", [
-                new Response("Football", true),
-                new Response("Basketball", false),
-                new Response("Tennis", false)
+            new Question("Lorsqu’il court, le guépard peut atteindre une vitesse maximale de 80 km/h.", [
+                new Response("Vrai", false),
+                new Response("Faux", true),
             ]),
-            new Question("Quel est le sport le plus populaire en Belgique ?", [
-                new Response("Football", false),
-                new Response("Basketball", false),
-                new Response("Tennis", true)
+            new Question("Les cobras n’ont pas de prédateur connu ?", [
+                new Response("Vrai", false),
+                new Response("Faux", true),
             ])
         ])
     ], "https://img.freepik.com/vecteurs-libre/ensemble-animaux-sauvages_1308-28248.jpg"),
     //Second Category
     new Category("Sciences", [
-        new Quiz("Populaire", [
-            new Question("Quel est le sport le plus populaire au monde ?", [
-                new Response("Football", false),
-                new Response("Basketball", true),
-                new Response("Tennis", false)
+        new Quiz("les fusées", [
+            new Question("La Saturn V est la fusée qui a propulsé Apollo 11 vers la Lune, en juillet 1969.", [
+                new Response("Vrai", true),
+                new Response("Faux", false),
             ]),
-            new Question("Quel est le sport le plus populaire en France ?", [
-                new Response("Football", true),
-                new Response("Basketball", false),
-                new Response("Tennis", false)
+            new Question("La fusée Ariane est le véhicule de lancement de l’Agence spatiale européenne.", [
+                new Response("Vrai", true),
+                new Response("Faux", false),
             ]),
-            new Question("Quel est le sport le plus populaire en Belgique ?", [
-                new Response("Football", false),
-                new Response("Basketball", false),
-                new Response("Tennis", true)
+            new Question("Le nom de la fusée qui a transporté l’acteur William Shatner, qui a incarné le capitaine Kirk, était l’Explorer 1.", [
+                new Response("Vrai", false),
+                new Response("Faux", true),
             ])
         ])
     ], "https://lewebpedagogique.com/haudrafrancais/files/2020/09/science.png"),
@@ -88,10 +79,17 @@ function startQuiz(id: string|null) {
         if (category.name === id){
             let cardsList = document.querySelector(".cards-list");
             cardsList?.setAttribute('style', "display:none");
+            let titleCategory = document.querySelector(".title");
+            titleCategory?.setAttribute('style', "display:none");
             let startCard = document.querySelector(".start");
             startCard?.setAttribute('style', "");
 
             let startNumberQuestions = document.querySelector("#startCard");
+
+            let createImg = document.createElement("img");
+            createImg.setAttribute("class", "imgQuiz");
+            createImg.setAttribute("src", category.image);
+            startNumberQuestions.appendChild(createImg);
             startNumberQuestions?.appendChild(startElement(category.quizzes[0].questions, category));
 
             const startBtn = document.querySelector("[data-start-btn]");
@@ -116,6 +114,7 @@ function startQuiz(id: string|null) {
 }
 
 function startElement(questions, category) {
+
     let createP = document.createElement("p");
     createP.setAttribute("class", "description");
     createP.appendChild(
@@ -130,7 +129,7 @@ function startElement(questions, category) {
 function createElementQuestion(questions: any, questionNumber:any, countCorrectAnswers:any){
         let question = questions[questionNumber];
         let divQuestionTitle = document.querySelector("#questionPage");
-        divQuestionTitle?.appendChild(createQuestionTitle(question.name));
+        divQuestionTitle?.prepend(createQuestionTitle(question.name));
 
         let divQuestionReponse = createQuestionReponses(
             question.answers,
@@ -154,39 +153,41 @@ function createQuestionTitle(title) {
 }
 
 function createQuestionReponses(
-    answers,
-    question,
-    questionNumber,
-    questions,
-    countCorrectAnswers
+  answers,
+  question,
+  questionNumber,
+  questions,
+  countCorrectAnswers
 ) {
-    answers.forEach((answer) => {
-        const answerElement = document.createElement("li");
+  answers.forEach((answer) => {
+      const answerElement = document.createElement("li");
 
-        answerElement.setAttribute("class", "answer");
+      answerElement.setAttribute("class", "answer");
 
-        answerElement.appendChild(document.createTextNode(answer.name));
+      answerElement.appendChild(document.createTextNode(answer.name));
 
-        let divQuestionAnswers = document.querySelector("#questionAnswers");
-        divQuestionAnswers?.appendChild(answerElement);
-    });
-    question.answers.forEach((responseBtn:any) => {
-        responseBtn.addEventListener("click", () => {
-           //console.log(question.answers.);
-            switch (responseBtn.correct) {
-                case true:
-                    responseBtn.setAttribute("class", "answer correct");
-                    countCorrectAnswers = getNumberOfCorrectAnswers(countCorrectAnswers);
-                    break;
-                case false :
-                    responseBtn.setAttribute("class", "answer wrong");
-                    break
+      let divQuestionAnswers = document.querySelector("#questionAnswers");
+      divQuestionAnswers?.appendChild(answerElement);
+  });
+  const responsesBtn = document.querySelectorAll(".answer");
+
+  responsesBtn.forEach((responseBtn) => {
+      responseBtn.addEventListener("click", () => {
+        question.answers.forEach((reponseCorrect)=>{
+          if(reponseCorrect.name == responseBtn.textContent){
+            if(reponseCorrect.correct == true){
+              responseBtn.setAttribute("class", "answer correct");
+              countCorrectAnswers = getNumberOfCorrectAnswers(countCorrectAnswers);
+            }else{
+              responseBtn.setAttribute("class", "answer wrong");
             }
-            setTimeout(function () {
-                nextQuestion(questionNumber, questions, countCorrectAnswers);
-            }, 1500);
-        });
-    });
+          }
+        })
+          setTimeout(function () {
+              nextQuestion(questionNumber, questions, countCorrectAnswers);
+          }, 1500);
+      });
+  });
 }
 
 function getNumberOfCorrectAnswers(countCorrectAnswers) {
@@ -236,7 +237,6 @@ function countNumberOfQuestion(questions) {
 
 function setTextResult(correctAnswers) {
     const numberOfCorrectAnswers = document.createElement("strong");
-    console.log(numberOfCorrectAnswers);
     numberOfCorrectAnswers.appendChild(document.createTextNode(correctAnswers));
 
     return numberOfCorrectAnswers;
@@ -266,199 +266,3 @@ function createElementCategory(category: any) {
 
     return divElement;
 }
-
-
-
-
-
-
-
-
-
-/*
-class question {
-    title;
-    answers;
-    correctAnswer;
-
-    constructor(title, answers, correctAnswer) {
-        this.title = title;
-        this.answers = answers;
-        this.correctAnswer = correctAnswer;
-    }
-
-    isCorrectAnswer(userResponse) {
-        if (userResponse == this.correctAnswer) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-}
-
-//Nouvelle question
-let question1 = new question(
-    "Quel est l'âge du capitaine ?",
-    [42, 101, 18],
-    42
-);
-let question2 = new question(
-    "Quel est la différence entre un pigeon ?",
-    ["GLOUUUU", "Uh ?", "La longueur des pattes"],
-    "La longueur des pattes"
-);
-let question3 = new question(
-    "Qu'est-ce qui est jaune et qui attend ?",
-    ["Jonathan", "Homer Simpson", "Un citron pressé"],
-    "Jonathan"
-);
-
-let questions = [question1, question2, question3];
-
-let startNumberQuestions = document.querySelector("#startCard");
-startNumberQuestions?.appendChild(startCard(questions));
-
-let questionElementHtml = document.querySelector("#questionPage");
-
-const startBtn = document.querySelector("[data-start-btn]");
-
-startBtn.addEventListener("click", () => {
-    let questionNumber = 0;
-
-    let countCorrectAnswers = 0;
-
-    let cardQuestion = document.querySelector("#questionCard");
-    cardQuestion.setAttribute("style", "");
-
-    let cardStartQuizz = document.querySelector(".start");
-    cardStartQuizz.setAttribute("style", "display:none;");
-
-    createQuestion(questions, questionNumber, countCorrectAnswers);
-});
-
-function deleteOldQuestion() {
-    let oldTitle = document.querySelector("#question-title");
-
-    oldTitle.parentNode.removeChild(oldTitle);
-
-    let oldResponses = document.querySelectorAll(".answer");
-    oldResponses.forEach((oldResponse) => {
-        oldResponse.parentNode.removeChild(oldResponse);
-    });
-}
-
-function createQuestion(questions, questionNumber, countCorrectAnswers) {
-    let question = questions[questionNumber];
-    let divQuestionTitle = document.querySelector("#questionPage");
-    divQuestionTitle?.appendChild(createQuestionTitle(question["title"]));
-
-    let divQuestionAnswers = document.querySelector("#questionAnswers");
-    let divQuestionReponse = createQuestionReponses(
-        question["answers"],
-        question,
-        questionNumber,
-        questions,
-        countCorrectAnswers
-    );
-}
-
-function createQuestionTitle(title) {
-    const titleElement = document.createElement("h2");
-
-    titleElement.setAttribute("class", "question");
-
-    titleElement.setAttribute("id", "question-title");
-
-    titleElement.appendChild(document.createTextNode(title));
-
-    return titleElement;
-}
-
-function createQuestionReponses(
-    answers,
-    question,
-    questionNumber,
-    questions,
-    countCorrectAnswers
-) {
-    answers.forEach((answer) => {
-        const answerElement = document.createElement("li");
-
-        answerElement.setAttribute("class", "answer");
-
-        answerElement.appendChild(document.createTextNode(answer));
-
-        let divQuestionAnswers = document.querySelector("#questionAnswers");
-        divQuestionAnswers?.appendChild(answerElement);
-    });
-    const responsesBtn = document.querySelectorAll(".answer");
-
-    responsesBtn.forEach((responseBtn) => {
-        responseBtn.addEventListener("click", () => {
-            if (question.isCorrectAnswer(responseBtn.textContent)) {
-                responseBtn.setAttribute("class", "answer correct");
-                countCorrectAnswers = getNumberOfCorrectAnswers(countCorrectAnswers);
-            } else {
-                responseBtn.setAttribute("class", "answer wrong");
-            }
-            setTimeout(function () {
-                nextQuestion(questionNumber, questions, countCorrectAnswers);
-            }, 1500);
-        });
-    });
-}
-
-function getNumberOfCorrectAnswers(countCorrectAnswers) {
-    return countCorrectAnswers + 1;
-}
-
-function nextQuestion(questionNumber, questions, countCorrectAnswers) {
-    if (questions[questionNumber + 1]) {
-        deleteOldQuestion();
-        createQuestion(questions, questionNumber + 1, countCorrectAnswers);
-    } else {
-        hideQuestionCard();
-        getResult(questions, countCorrectAnswers);
-    }
-}
-
-function hideQuestionCard() {
-    let cardQuestion = document.querySelector("#questionCard");
-    cardQuestion.setAttribute("style", "display:none;");
-}
-
-function getResult(questions, countCorrectAnswers) {
-    let cardResult = document.querySelector("#resultCard");
-    cardResult.setAttribute("style", "");
-
-    let showedResult = document.querySelector("#nbCorrects");
-    showedResult.appendChild(setTextResult(countCorrectAnswers));
-    showedResult.appendChild(countNumberOfQuestion(questions));
-}
-
-function setTextResult(correctAnswers) {
-    const numberOfCorrectAnswers = document.createElement("strong");
-    console.log(numberOfCorrectAnswers);
-    numberOfCorrectAnswers.appendChild(document.createTextNode(correctAnswers));
-
-    return numberOfCorrectAnswers;
-}
-
-function countNumberOfQuestion(questions) {
-    return document.createTextNode(
-        " réponses sur " + questions.length + " correctes"
-    );
-}
-
-function startCard(questions) {
-    let createP = document.createElement("p");
-    createP.setAttribute("class", "description");
-    createP.appendChild(
-        document.createTextNode(
-            "Il sera composé de " + questions.length + " questions."
-        )
-    );
-
-    return createP;
-}
-*/
