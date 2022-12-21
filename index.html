@@ -2,9 +2,9 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/style.css">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="public/style.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -12,28 +12,30 @@
     <h2 class="title" style="text-align:center">Veuillez sélectionner une catégorie de quiz</h2>
     <div class="cards-list">
     </div>
+
+    <div class="listQuiz"></div>
     <section class="start" style="display:none;">
         <div id="startCard">
             <h1 class="title">Bienvenue sur ce quizz</h1>
         </div>
-        <button id="next" class="btn" data-start-btn>COMMENCER</button>
+        <button class="btn" data-start-btn id="next">COMMENCER</button>
     </section>
-    <section class="quizz" style="display:none" id="questionCard">
+    <section class="quizz" id="questionCard" style="display:none">
         <div class="questionsPage" id="questionPage">
             <ul class="questionsAnswers" id="questionAnswers">
             </ul>
         </div>
     </section>
-    <section class="quizz" style="display:none" id="resultCard">
+    <section class="quizz" id="resultCard" style="display:none">
         <div class="resultscreen">
             <h2 class="quizzresults">Résultats</h2>
             <p class="quizzdescription">
                 <span id="nbCorrects"></span>
             </p>
-            <button id="next" onClick="history.go(0)" class="quizz__btn">Recommencer</button>
+            <button class="quizz__btn" id="next" onClick="history.go(0)">Recommencer</button>
         </div>
     </section>
 </main>
-<script type="module" src="src/main.ts"></script>
+<script src="src/main.ts" type="module"></script>
 </body>
 </html>
