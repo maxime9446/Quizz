@@ -20,7 +20,7 @@ const categories = Array(
                 new Response("Vrai", false),
                 new Response("Faux", true),
             ])
-        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
+        ], "https://www.1min30.com/wp-content/uploads/2017/09/logo-psg-2014.jpg"),
         // Quiz 2
         new Quiz("L’Olympique de Marseille", [
             new Question("L’Olympique de Marseille détient le record de défaites consécutives en Ligue des champions.", [
@@ -35,7 +35,7 @@ const categories = Array(
                 new Response("Vrai", false),
                 new Response("Faux", true),
             ])
-        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
+        ], "https://www.1min30.com/wp-content/uploads/2018/03/Embl%C3%A8me-Olympique-de-Marseille.jpg"),
         // Quiz 3
         new Quiz("Le Lille Olympique Sporting Club", [
             new Question("Le LOSC a gagné sa première Coupe de France en 2011 contre le PSG.", [
@@ -50,7 +50,7 @@ const categories = Array(
                 new Response("Vrai", true),
                 new Response("Faux", false),
             ])
-        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg")
+        ], "https://www.1min30.com/wp-content/uploads/2018/08/Logo-Lille.jpg")
     ], "https://sports-village.com/img/home/multisport.webp"),
     //Second Category
     new Category("Animaux", [
@@ -68,7 +68,7 @@ const categories = Array(
                 new Response("Vrai", false),
                 new Response("Faux", true),
             ])
-        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
+        ], "https://www.conservation-nature.fr/wp-content/uploads/2021/09/animaux-du-desert-1024x565.jpg"),
         // Quiz 2
         new Quiz("Les serpents", [
             new Question("Un cobra royal peut injecter suffisamment de venin dans une morsure pour tuer 20 personnes (ou un éléphant).", [
@@ -83,7 +83,7 @@ const categories = Array(
                 new Response("Vrai", false),
                 new Response("Faux", true),
             ])
-        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
+        ], "https://t2.ea.ltmcdn.com/fr/posts/7/4/6/les_serpents_comme_animaux_de_compagnie_647_orig.jpg"),
         // Quiz 3
         new Quiz("Les pieuvres", [
             new Question("La plus petite pieuvre au monde mesure 30 cm de long.", [
@@ -98,7 +98,7 @@ const categories = Array(
                 new Response("Vrai", true),
                 new Response("Faux", false),
             ])
-        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg")
+        ], "https://www.jaitoutcompris.com/img/encyclo/pieuvre.jpg")
     ], "https://img.freepik.com/vecteurs-libre/ensemble-animaux-sauvages_1308-28248.jpg"),
     //Three Category
     new Category("Sciences", [
@@ -116,7 +116,7 @@ const categories = Array(
                 new Response("Vrai", false),
                 new Response("Faux", true),
             ])
-        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
+        ], "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Apollo_11_Saturn_V_lifting_off_on_July_16%2C_1969.jpg/1200px-Apollo_11_Saturn_V_lifting_off_on_July_16%2C_1969.jpg"),
         // Quiz 2
         new Quiz("Les icebergs", [
             new Question("Les plus gros icebergs proviennent de l’Arctique.", [
@@ -131,7 +131,7 @@ const categories = Array(
                 new Response("Vrai", true),
                 new Response("Faux", false),
             ])
-        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
+        ], "https://www.espace-sciences.org/sites/espace-sciences.org/files/users/u158/iceberg2.png"),
         // Quiz 3
         new Quiz("Les tornades", [
             new Question("Certaines tornades peuvent être bleu foncé.", [
@@ -146,7 +146,7 @@ const categories = Array(
                 new Response("Vrai", false),
                 new Response("Faux", true),
             ])
-        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg")
+        ], "https://cdn.futura-sciences.com/sources/images/dossier/32/01-intro-32.jpg")
     ], "https://lewebpedagogique.com/haudrafrancais/files/2020/09/science.png"),
     //4 Category
     new Category("Langue Française", [
@@ -164,7 +164,7 @@ const categories = Array(
                 new Response("Vrai", true),
                 new Response("Faux", false),
             ])
-        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
+        ], "https://quipoquiz.com/sn_uploads/quizzes/pluriels_1200x800_181207_FR_v2.jpg"),
         //Quiz 2
         new Quiz("Les expressions françaises", [
             new Question("«Dès potron-minet» veut dire aux toutes premières heures de la journée.", [
@@ -179,7 +179,7 @@ const categories = Array(
                 new Response("Vrai", true),
                 new Response("Faux", false),
             ])
-        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
+        ], "https://3.bp.blogspot.com/-GwfOzvYlj4k/Wuj_mS41UzI/AAAAAAAAosc/gVJijrET6LE2KvH1NC5LS4qv7DLYoiHaQCLcBGAs/s1600/Word%2BArt.jpeg"),
         //Quiz 3
         new Quiz("La grammaire", [
             new Question("Dans la phrase suivante, l’attribut est « semblait » : « Avant son départ, Gontrand semblait surexcité. »", [
@@ -194,7 +194,7 @@ const categories = Array(
                 new Response("Vrai", true),
                 new Response("Faux", false),
             ])
-        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg")
+        ], "https://www.ila-france.fr/wp-content/uploads/2016/05/erreurs-classiques-grammaire-francaise.jpg")
     ], "https://images.ctfassets.net/jr2kttyjrxby/1X56ChsY5wCOXva2kCrt58/83a0b64371681aa6d0230a426187dc38/combien-mots-langue-francaise.jpg"),
     //5 Category
     new Category("Géographie", [
@@ -212,7 +212,7 @@ const categories = Array(
                 new Response("Vrai", true),
                 new Response("Faux", false),
             ])
-        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
+        ], "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu.jpg/1200px-View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu.jpg"),
         //Quiz 2
         new Quiz("Les capitales européennes", [
             new Question("Oslo, en Norvège, est réputée pour ses parcs.", [
@@ -227,7 +227,7 @@ const categories = Array(
                 new Response("Vrai", false),
                 new Response("Faux", true),
             ])
-        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
+        ], "https://i.pinimg.com/736x/85/bf/8a/85bf8af52bde6410a7afbe94878d056e.jpg"),
         //Quiz 3
         new Quiz("L’Espagne", [
             new Question("Ce pays est un des plus boisés d’Europe.", [
@@ -242,7 +242,7 @@ const categories = Array(
                 new Response("Vrai", false),
                 new Response("Faux", true),
             ])
-        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg")
+        ], "https://img.le-dictionnaire.com/espagne-drapeau.jpg")
     ], "https://grip-editions.fr/assets/uploads/images/couvertures/geographie.jpg"),
     //6 Category
     new Category("Arts et culture", [
@@ -260,7 +260,7 @@ const categories = Array(
                 new Response("Vrai", false),
                 new Response("Faux", true),
             ])
-        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
+        ], "https://static.wikia.nocookie.net/lucifer/images/e/e3/410-Lucifer_on_his_throne.jpg"),
         // Quiz 2
         new Quiz("Comics aléatoire", [
             new Question("Le premier héros à avoir eu la capacité de voler est Superman. ", [
@@ -275,7 +275,7 @@ const categories = Array(
                 new Response("Vrai", true),
                 new Response("Faux", false),
             ])
-        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
+        ], "https://atelier-de-papy.com/wp-content/uploads/2021/07/DSC_0381-3.jpg"),
         // Quiz 3
         new Quiz("Le Marvel Cinematic Universe", [
             new Question("Loki est un Dieu. ", [
@@ -290,7 +290,7 @@ const categories = Array(
                 new Response("Vrai", true),
                 new Response("Faux", false),
             ])
-        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg")
+        ], "https://cdn.sortiraparis.com/images/80/66131/612884-loki-nouvelle-serie-marvel-sur-disney-devoile-sa-premiere-bande-annonce.jpg")
     ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
 );
 
@@ -373,11 +373,3 @@ function startQuiz(id: any | null, index: any) {
         }
     });
 }
-
-
-
-
-
-
-
-
