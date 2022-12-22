@@ -1,5 +1,5 @@
-// L'objectif est de créer chaque question de la class quizz de quizz.ts, et de pouvoir les afficher dans une page dédiée. Tout est en typescript
-import Response  from './Answers';
+import Response from './Answers';
+
 export default class Question {
     name: string;
     answers: Array<Response>;
@@ -8,4 +8,19 @@ export default class Question {
         this.name = name;
         this.answers = answers;
     }
+
+
+    createQuestionTitle(title) {
+        const titleElement = document.createElement("h2");
+
+        titleElement.setAttribute("class", "question");
+
+        titleElement.setAttribute("id", "question-title");
+
+        titleElement.appendChild(document.createTextNode(title));
+
+        return titleElement;
+    }
+
+
 }

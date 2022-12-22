@@ -20,7 +20,7 @@ const categories = Array(
                 new Response("Vrai", false),
                 new Response("Faux", true),
             ])
-        ]),
+        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
         // Quiz 2
         new Quiz("L’Olympique de Marseille", [
             new Question("L’Olympique de Marseille détient le record de défaites consécutives en Ligue des champions.", [
@@ -35,7 +35,7 @@ const categories = Array(
                 new Response("Vrai", false),
                 new Response("Faux", true),
             ])
-        ]),
+        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
         // Quiz 3
         new Quiz("Le Lille Olympique Sporting Club", [
             new Question("Le LOSC a gagné sa première Coupe de France en 2011 contre le PSG.", [
@@ -50,7 +50,7 @@ const categories = Array(
                 new Response("Vrai", true),
                 new Response("Faux", false),
             ])
-        ])
+        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg")
     ], "https://sports-village.com/img/home/multisport.webp"),
     //Second Category
     new Category("Animaux", [
@@ -68,7 +68,7 @@ const categories = Array(
                 new Response("Vrai", false),
                 new Response("Faux", true),
             ])
-        ]),
+        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
         // Quiz 2
         new Quiz("Les serpents", [
             new Question("Un cobra royal peut injecter suffisamment de venin dans une morsure pour tuer 20 personnes (ou un éléphant).", [
@@ -83,7 +83,7 @@ const categories = Array(
                 new Response("Vrai", false),
                 new Response("Faux", true),
             ])
-        ]),
+        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
         // Quiz 3
         new Quiz("Les pieuvres", [
             new Question("La plus petite pieuvre au monde mesure 30 cm de long.", [
@@ -98,7 +98,7 @@ const categories = Array(
                 new Response("Vrai", true),
                 new Response("Faux", false),
             ])
-        ])
+        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg")
     ], "https://img.freepik.com/vecteurs-libre/ensemble-animaux-sauvages_1308-28248.jpg"),
     //Three Category
     new Category("Sciences", [
@@ -116,7 +116,7 @@ const categories = Array(
                 new Response("Vrai", false),
                 new Response("Faux", true),
             ])
-        ]),
+        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
         // Quiz 2
         new Quiz("Les icebergs", [
             new Question("Les plus gros icebergs proviennent de l’Arctique.", [
@@ -131,7 +131,7 @@ const categories = Array(
                 new Response("Vrai", true),
                 new Response("Faux", false),
             ])
-        ]),
+        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
         // Quiz 3
         new Quiz("Les tornades", [
             new Question("Certaines tornades peuvent être bleu foncé.", [
@@ -146,7 +146,7 @@ const categories = Array(
                 new Response("Vrai", false),
                 new Response("Faux", true),
             ])
-        ])
+        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg")
     ], "https://lewebpedagogique.com/haudrafrancais/files/2020/09/science.png"),
     //4 Category
     new Category("Langue Française", [
@@ -164,7 +164,7 @@ const categories = Array(
                 new Response("Vrai", true),
                 new Response("Faux", false),
             ])
-        ]),
+        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
         //Quiz 2
         new Quiz("Les expressions françaises", [
             new Question("«Dès potron-minet» veut dire aux toutes premières heures de la journée.", [
@@ -179,7 +179,7 @@ const categories = Array(
                 new Response("Vrai", true),
                 new Response("Faux", false),
             ])
-        ]),
+        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
         //Quiz 3
         new Quiz("La grammaire", [
             new Question("Dans la phrase suivante, l’attribut est « semblait » : « Avant son départ, Gontrand semblait surexcité. »", [
@@ -194,7 +194,7 @@ const categories = Array(
                 new Response("Vrai", true),
                 new Response("Faux", false),
             ])
-        ])
+        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg")
     ], "https://images.ctfassets.net/jr2kttyjrxby/1X56ChsY5wCOXva2kCrt58/83a0b64371681aa6d0230a426187dc38/combien-mots-langue-francaise.jpg"),
     //5 Category
     new Category("Géographie", [
@@ -212,7 +212,7 @@ const categories = Array(
                 new Response("Vrai", true),
                 new Response("Faux", false),
             ])
-        ]),
+        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
         //Quiz 2
         new Quiz("Les capitales européennes", [
             new Question("Oslo, en Norvège, est réputée pour ses parcs.", [
@@ -227,7 +227,7 @@ const categories = Array(
                 new Response("Vrai", false),
                 new Response("Faux", true),
             ])
-        ]),
+        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
         //Quiz 3
         new Quiz("L’Espagne", [
             new Question("Ce pays est un des plus boisés d’Europe.", [
@@ -242,7 +242,7 @@ const categories = Array(
                 new Response("Vrai", false),
                 new Response("Faux", true),
             ])
-        ])
+        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg")
     ], "https://grip-editions.fr/assets/uploads/images/couvertures/geographie.jpg"),
     //6 Category
     new Category("Arts et culture", [
@@ -260,7 +260,7 @@ const categories = Array(
                 new Response("Vrai", false),
                 new Response("Faux", true),
             ])
-        ]),
+        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
         // Quiz 2
         new Quiz("Comics aléatoire", [
             new Question("Le premier héros à avoir eu la capacité de voler est Superman. ", [
@@ -275,7 +275,7 @@ const categories = Array(
                 new Response("Vrai", true),
                 new Response("Faux", false),
             ])
-        ]),
+        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
         // Quiz 3
         new Quiz("Le Marvel Cinematic Universe", [
             new Question("Loki est un Dieu. ", [
@@ -290,39 +290,38 @@ const categories = Array(
                 new Response("Vrai", true),
                 new Response("Faux", false),
             ])
-        ])
+        ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg")
     ], "https://img.freepik.com/vecteurs-libre/art-culture-icons-set_1284-14809.jpg"),
 );
 
 
+// Parcours de categories qui permet de donner le style à chaque category
 categories.forEach((category) => {
-    // TODO : Pour chaque catégories j'affiche une vue
-    let elementCategory = createElementCategory(category);
+    let elementCategory = category.createElementCategory(category);
 
     let cardsList = document.querySelector(".cards-list");
     cardsList?.appendChild(elementCategory);
 
 });
 
+
 let cards = document.querySelectorAll(".card");
 
 cards.forEach((card) => {
     card.addEventListener("click", () => {
         Quizz(card.getAttribute('id'));
-        // startQuiz(card.getAttribute('id'));
     })
 })
 
 function Quizz(idCategory: string | null) {
     let ElementCategories = document.querySelector(".cards-list");
-    // let categoriesId = document.querySelector(".card");
     ElementCategories?.setAttribute('style', 'display:none');
     let ElementTitleCategories = document.querySelector(".title");
     ElementTitleCategories.innerHTML = "Veuillez sélectionner un quizz";
     categories.forEach((category) => {
         if (idCategory === category.name) {
             category.quizzes.forEach((quiz, index = 0) => {
-                createElementQuizz(quiz, index);
+                quiz.createElementQuizz(quiz, index);
                 index++;
             })
         }
@@ -331,21 +330,14 @@ function Quizz(idCategory: string | null) {
     let quizzes = document.querySelectorAll(".quiz");
 
     quizzes.forEach((quiz) => {
-    quiz.addEventListener("click", () => {
-        startQuiz(idCategory, quiz.getAttribute('id'));
+        quiz.addEventListener("click", () => {
+            startQuiz(idCategory, quiz.getAttribute('id'));
+        })
     })
-})
 
 }
 
-function createElementQuizz(quiz: any, index:any) {
-    let elementCategory = createElementQuiz(quiz, index);
-
-    let cardsList = document.querySelector(".listQuiz");
-    cardsList?.appendChild(elementCategory);
-}
-
-function startQuiz(id: any | null, index:any) {
+function startQuiz(id: any | null, index: any) {
     categories.forEach((category) => {
         if (category.name === id) {
             let cardsList = document.querySelector(".listQuiz");
@@ -361,7 +353,7 @@ function startQuiz(id: any | null, index:any) {
             createImg.setAttribute("class", "imgQuiz");
             createImg.setAttribute("src", category.quizzes[index].image);
             startNumberQuestions.appendChild(createImg);
-            startNumberQuestions?.appendChild(startElement(category.quizzes[index].questions, category));
+            startNumberQuestions?.appendChild(category.quizzes[index].startElement(category.quizzes[index].questions, category));
 
             const startBtn = document.querySelector("[data-start-btn]");
 
@@ -376,190 +368,16 @@ function startQuiz(id: any | null, index:any) {
                 let cardStartQuizz = document.querySelector(".start");
                 cardStartQuizz?.setAttribute("style", "display:none;");
 
-                createElementQuestion(category.quizzes[index].questions, questionNumber, countCorrectAnswers);
-
-                //createElementQuestion(category);
+                category.quizzes[index].createElementQuestion(category.quizzes[index].questions, questionNumber, countCorrectAnswers);
             });
         }
     });
 }
 
-function startElement(questions, category) {
-    console.log(category);
-    
-    let createP = document.createElement("p");
-    createP.setAttribute("class", "description");
-    createP.appendChild(
-        document.createTextNode(
-            "Il sera composé de " + questions.length + " questions (Thème : " + category.name + ")"
-        )
-    );
 
-    return createP;
-}
 
-function createElementQuestion(questions: any, questionNumber: any, countCorrectAnswers: any) {
-    let question = questions[questionNumber];
-    let divQuestionTitle = document.querySelector("#questionPage");
-    divQuestionTitle?.prepend(createQuestionTitle(question.name));
 
-    let divQuestionReponse = createQuestionReponses(
-        question.answers,
-        question,
-        questionNumber,
-        questions,
-        countCorrectAnswers
-    );
-}
 
-function createQuestionTitle(title) {
-    const titleElement = document.createElement("h2");
 
-    titleElement.setAttribute("class", "question");
 
-    titleElement.setAttribute("id", "question-title");
 
-    titleElement.appendChild(document.createTextNode(title));
-
-    return titleElement;
-}
-
-function createQuestionReponses(
-    answers,
-    question,
-    questionNumber,
-    questions,
-    countCorrectAnswers
-) {
-    answers.forEach((answer) => {
-        const answerElement = document.createElement("li");
-
-        answerElement.setAttribute("class", "answer");
-
-        answerElement.appendChild(document.createTextNode(answer.name));
-
-        let divQuestionAnswers = document.querySelector("#questionAnswers");
-        divQuestionAnswers?.appendChild(answerElement);
-    });
-    const responsesBtn = document.querySelectorAll(".answer");
-
-    responsesBtn.forEach((responseBtn) => {
-        responseBtn.addEventListener("click", () => {
-            question.answers.forEach((reponseCorrect) => {
-                if (reponseCorrect.name == responseBtn.textContent) {
-                    if (reponseCorrect.correct == true) {
-                        responseBtn.setAttribute("class", "answer correct");
-                        countCorrectAnswers = getNumberOfCorrectAnswers(countCorrectAnswers);
-                    } else {
-                        responseBtn.setAttribute("class", "answer wrong");
-                    }
-                }
-            })
-            setTimeout(function () {
-                nextQuestion(questionNumber, questions, countCorrectAnswers);
-            }, 1500);
-        });
-    });
-}
-
-function getNumberOfCorrectAnswers(countCorrectAnswers) {
-    return countCorrectAnswers + 1;
-}
-
-function nextQuestion(questionNumber, questions, countCorrectAnswers) {
-    if (questions[questionNumber + 1]) {
-        deleteOldQuestion();
-        createElementQuestion(questions, questionNumber + 1, countCorrectAnswers);
-    } else {
-        hideQuestionCard();
-        getResult(questions, countCorrectAnswers);
-    }
-}
-
-function deleteOldQuestion() {
-    let oldTitle = document.querySelector("#question-title");
-
-    oldTitle?.parentNode?.removeChild(oldTitle);
-
-    let oldResponses = document.querySelectorAll(".answer");
-    oldResponses.forEach((oldResponse) => {
-        oldResponse.parentNode?.removeChild(oldResponse);
-    });
-}
-
-function hideQuestionCard() {
-    let cardQuestion = document.querySelector("#questionCard");
-    cardQuestion?.setAttribute("style", "display:none;");
-}
-
-function getResult(questions, countCorrectAnswers) {
-    let cardResult = document.querySelector("#resultCard");
-    cardResult?.setAttribute("style", "");
-
-    let showedResult = document.querySelector("#nbCorrects");
-    showedResult?.appendChild(setTextResult(countCorrectAnswers));
-    showedResult?.appendChild(countNumberOfQuestion(questions));
-}
-
-function countNumberOfQuestion(questions) {
-    return document.createTextNode(
-        " réponses sur " + questions.length + " correctes"
-    );
-}
-
-function setTextResult(correctAnswers) {
-    const numberOfCorrectAnswers = document.createElement("strong");
-    numberOfCorrectAnswers.appendChild(document.createTextNode(correctAnswers));
-
-    return numberOfCorrectAnswers;
-}
-
-function createElementCategory(category: any) {
-    const divElement = document.createElement("div");
-    divElement.setAttribute("class", `card`);
-    divElement.setAttribute("id", `${category.name}`);
-
-    const divImgElement = document.createElement("div");
-    divImgElement.setAttribute("class", "card_image");
-
-    const imgElement = document.createElement("img");
-    imgElement.setAttribute("src", category.image);
-    divImgElement.appendChild(imgElement);
-    divElement.appendChild(divImgElement);
-
-    const divTitleElement = document.createElement("div");
-    divTitleElement.setAttribute("class", "card_title");
-
-    const titleElement = document.createElement("p");
-    titleElement.appendChild(document.createTextNode(category.name));
-
-    divTitleElement.appendChild(titleElement);
-    divElement.appendChild(divTitleElement);
-
-    return divElement;
-}
-
-function createElementQuiz(quiz: any, index:any) {
-    const divElement = document.createElement("div");
-    divElement.setAttribute("class", `card quiz`);
-    divElement.setAttribute("id", `${index}`);
-
-    const divImgElement = document.createElement("div");
-    divImgElement.setAttribute("class", "card_image");
-
-    const imgElement = document.createElement("img");
-    imgElement.setAttribute("src", quiz.image);
-    divImgElement.appendChild(imgElement);
-    divElement.appendChild(divImgElement);
-
-    const divTitleElement = document.createElement("div");
-    divTitleElement.setAttribute("class", "card_title");
-
-    const titleElement = document.createElement("p");
-    titleElement.appendChild(document.createTextNode(quiz.name));
-
-    divTitleElement.appendChild(titleElement);
-    divElement.appendChild(divTitleElement);
-
-    return divElement;
-}
